@@ -26,15 +26,6 @@ jobs:
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
 
-      - name: Build arm64 image
-        uses: docker/build-push-action@v6
-        with:
-          context: .
-          platforms: linux/arm64
-          file: utils/docker/Dockerfile-arm64
-          push: false  # Only build, do not push
-          tags: ultralytics/yolov5:latest-arm64
-
       - name: Build CPU image
         uses: docker/build-push-action@v6
         with:
