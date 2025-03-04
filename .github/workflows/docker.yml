@@ -11,7 +11,7 @@ on:
 
 jobs:
   docker:
-    if: github.repository == 'ultralytics/yolov5'
+    if: github.repository == 'fjebari/yolov5'
     name: Push Docker image to Docker Hub
     runs-on: ubuntu-latest
     steps:
